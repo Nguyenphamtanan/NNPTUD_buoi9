@@ -19,6 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
 //domain:port/api/v1/products
 //domain:port/api/v1/users
 //domain:port/api/v1/categories
@@ -43,6 +44,7 @@ app.use('/api/v1/categories', require('./routes/categories'))
 app.use('/api/v1/carts', require('./routes/carts'))
 app.use('/api/v1/upload', require('./routes/upload'))
 app.use('/api/v1/import-users', require('./routes/importUsers'));
+app.use("/api/v1/messages", require("./routes/messages"));
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
